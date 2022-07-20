@@ -1,0 +1,55 @@
+PROGRAM NUMBER: 08	
+AIM: Write a Shell program to show various system configurations such as currently logged users, operating system type, current shell, home directory, no. of logged in users.
+
+PROGRAM
+echo -n "Logged in users: " 
+who
+echo 
+
+echo -n "Loggin Names: " 
+users
+echo
+
+echo -n "Current Shell: "
+echo $SHELL
+echo
+
+echo -n "Home Directory: "
+echo $HOME
+echo
+
+echo-n "Operating System type: "
+uname -o
+echo $OSTYPE
+echo
+
+echo "Path Settings: "
+echo $PATH
+echo
+
+echo -n "Current working directory: "
+pwd
+echo
+
+echo -n "No.of logged in users: "
+users|wc -w
+
+OUTPUT
+richuantony38@Richu_Antony:~/Network_lab Record$ bash 8.sh
+Logged in users:  richuantony38   :0           2022-07-10 04:05 (:0)
+
+Loggin Names: richuantony38
+
+Current Shell: /bin/bash
+
+Home Directory: home/richuantony38
+
+Operating System type:
+GNU/Linux
+linux-gnu
+
+Path Settings:
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Current working directory: /home/richuantony38/Network_lab Record
+No.of logged in users: 1

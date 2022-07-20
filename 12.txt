@@ -1,0 +1,23 @@
+PROGRAM NUMBER: 12	 
+AIM: Write a Shell program to find the area of rectangle using functions.
+
+PROGRAM
+rectarea()
+{
+ 	a=`expr $1 \* $2`
+ 	echo $a 
+}
+
+echo -n "Enter length: "
+read l
+echo -n "Enter breadth: "
+read b
+echo "The area of rectangle having length = $l and breadth = $b is : "
+rectarea $l $b
+
+OUTPUT
+richuantony38@Richu_Antony:~/Network_lab Record$ bash 12.sh
+Enter length: 10
+Enter breadth: 20
+The area of rectangle having length = 10 and breadth = 20 is :
+200

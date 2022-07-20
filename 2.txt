@@ -1,0 +1,22 @@
+PROGRAM NUMBER: 02	
+AIM: Write a Shell program to find the factorial of a number.
+
+PROGRAM
+
+echo "Enter the number" 
+read n
+fact=1
+counter=0
+
+while(($n!=$counter))
+do 
+	counter=$((counter+1))
+	fact=$((fact*counter))
+done
+echo "Factorial is $fact"
+
+OUTPUT
+richuantony38@Richu_Antony:~/Network_lab Record$ bash 2.sh
+Enter the number
+5
+Factorial is 120

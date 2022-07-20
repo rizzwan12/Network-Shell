@@ -1,0 +1,67 @@
+PROGRAM NUMBER: 10	 
+AIM: Write a Shell program to perform file operations such as read a file, delete a file, append to file, check whether the file exists or not.
+
+PROGRAM
+echo "Read the contents of a file"
+echo "Enter file name to be read with extension: "
+read rfile
+cat $rfile
+echo $'\n' 
+
+echo "Append a file"
+echo "Enter file name to append content with extension: "
+read sfile
+echo "Enter file name to be append with extension: "
+read rfile
+echo "Before append"
+cat $rfile
+cat $sfile >> $rfile
+echo
+echo "After append"
+cat $rfile
+echo $'\n' 
+
+echo "Search for a file"
+echo "Enter the name of the file with extension: "
+read file_name
+if [ -e $file_name ]
+then
+   echo "$file_name exist"
+else
+   echo "$file_name not exist"
+fi
+echo $'\n' 
+
+echo "Delete a file"
+echo "Enter file name to be deleted with extension: "
+read dfile
+echo "Before delete"
+ls
+rm $dfile
+echo "After delete"
+ls
+
+OUTPUT
+richuantony38@Richu_Antony:~/Network_lab Record$ bash 10.sh
+Read the contents of a file
+Enter file name to be read with extension: com.txt
+Hello, Welcome Programmer;
+
+Append a file
+Enter file name to append content with extension: linux.txt
+Enter file name to be append with extension: com.txt
+***** Before  *****
+Hello, Welcome Programmer;
+***** After append *****
+Hello Welcome Programmer;  Linux is the kernal of Ubantu 22.04
+
+Search for a file
+Enter the name of the file with extension: test.txt
+test.txt exist
+
+Delete a file
+Enter file name to be deleted with extension: test.txt
+***** Before delete *****
+10.sh    linux.txt    hello.txt   test.txt  com.txt   New
+***** After delete ******
+10.sh    linux.txt    hello.txt   com.txt   New
